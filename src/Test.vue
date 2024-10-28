@@ -4,7 +4,7 @@
             <div class="text-white">
                 <div class="flex justify-center">
                     <div class="w-[200px] h-[200px] bg-cover bg-no-repeat bg-center border-4 border-white rounded-full"
-                         style="background-image: url(/src/assets/photo.jpg)"></div>
+                         style="background-image: url(resume/src/assets/photo.jpg)"></div>
                 </div>
                 <div>
                     <p class="mt-5 pb-2 text-xl font-bold uppercase border-b-2">Contact</p>
