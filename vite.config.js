@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: '/resume',
+  base: '/resume/',
   plugins: [vue()],
   resolve:{
     alias:{
