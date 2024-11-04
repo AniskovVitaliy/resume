@@ -13,11 +13,20 @@ const contactsInfo = ref(config.contacts);
 const skills = ref(config.skills);
 const workExperiences = ref(config.workExperiences);
 
-const language = ref(localStorage.getItem('language') ?? checkUrl() ?? 'en');
+const language = ref(localStorage.getItem('language') ?? checkGetParameter() ?? 'en');
 
-function checkUrl() {
-    let lastPath = window.location.pathname.split('/').filter((el) => el !== '').pop();
-    return lastPath === 'ru' || lastPath === 'en' ? lastPath : null;
+function checkGetParameter() {
+    let language = null;
+
+    if (window.location.search === '?ru') {
+        language = 'ru';
+    }
+
+    if (window.location.search === '?en') {
+        language = 'en';
+    }
+
+    return language;
 }
 
 function setLanguage(value) {
