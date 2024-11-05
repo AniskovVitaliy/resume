@@ -6,6 +6,7 @@ defineProps({
 </script>
 
 <template>
+
     <div class="pl-5 mb-10" v-for="workExperienceInfo in workExperiences[language]">
         <p class="flex justify-between"><span class="font-bold text-lg">{{ workExperienceInfo.place }}</span><span>{{ workExperienceInfo.date }}</span></p>
         <p class="italic">{{ workExperienceInfo.role }}</p>
@@ -22,7 +23,7 @@ defineProps({
         </ul>
     </div>
 
-    <div class="pl-5 mb-3" v-if="language === 'en'">
+    <div class="pl-5" v-if="language === 'en'">
         <p class="flex justify-between">
             <span class="font-bold text-lg">Homselmash. Homel. Belarusian</span><span>2011 - 2020</span>
         </p>
@@ -40,7 +41,7 @@ defineProps({
         </ul>
     </div>
 
-    <div class="pl-5 mb-3" v-else>
+    <div class="pl-5" v-else>
         <p class="flex justify-between">
             <span class="font-bold text-lg">Гомсельмаш. Гомель. Беларусь</span><span>2011 - 2020</span>
         </p>
