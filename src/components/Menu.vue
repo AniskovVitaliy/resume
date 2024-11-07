@@ -19,7 +19,7 @@ function downloadFile(url, fileName) {
     <div data-dial-init class="fixed z-10 end-6 bottom-6 group">
         <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
 
-            <button @click="downloadFile('./aniskov-vitaliy_en.pdf', 'aniskov-vitaliy-resume-en.pdf')" type="button"
+            <button @click="downloadFile('./aniskov-vitaliy-en.pdf', 'aniskov-vitaliy-resume-en.pdf')" type="button"
                     data-tooltip-target="tooltip-download-en" data-tooltip-placement="left"
                     class="flex justify-center items-center w-[56px] h-[56px] text-gray-500 hover:text-gray-900 bg-white rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -35,7 +35,7 @@ function downloadFile(url, fileName) {
                 Download english cv
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
-            <button @click="downloadFile('./aniskov-vitaliy_ru.pdf', 'aniskov-vitaliy-resume-ru.pdf')" type="button"
+            <button @click="downloadFile('./aniskov-vitaliy-ru.pdf', 'aniskov-vitaliy-resume-ru.pdf')" type="button"
                     data-tooltip-target="tooltip-download-ru" data-tooltip-placement="left"
                     class="flex justify-center items-center w-[56px] h-[56px] text-gray-500 hover:text-gray-900 bg-white rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
