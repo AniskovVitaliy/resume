@@ -35,7 +35,6 @@ function setLanguage(languageName) {
     language.value = languageName;
     localStorage.setItem('language', languageName);
 }
-
 </script>
 
 <template>
@@ -51,7 +50,7 @@ function setLanguage(languageName) {
                         :contactsInfo="contactsInfo"
                         :language="language"
                     />
-                    <div class="order-3 mb-10" v-if="language === 'en'">
+                    <div class="order-3 mb-10 max-lg:m-0" v-if="language === 'en'">
                         <p class="pb-2 text-xl font-bold uppercase border-b-2">Education</p>
                         <ul class="my-3 text-sm">
                             <li class="mb-2">2016 - 2021</li>
@@ -59,12 +58,12 @@ function setLanguage(languageName) {
                             <li class="mb-2">Software developer</li>
                         </ul>
                     </div>
-                    <div class="order-3 mb-10" v-else>
+                    <div class="order-3 mb-10 max-lg:m-0" v-else>
                         <p class="pb-2 text-xl font-bold uppercase border-b-2">Образование</p>
                         <ul class="my-3 text-sm">
                             <li class="mb-2">2016-2021</li>
                             <li class="mb-2">Гомельский университет имени Ф.Скорина</li>
-                            <li class="mb-2">Инженер программист</li>
+                            <li class="mb-2">Инженер-программист</li>
                         </ul>
                     </div>
                     <Skills

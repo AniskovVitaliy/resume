@@ -10,49 +10,48 @@ defineProps({
     <div class="pl-5 mb-10" v-for="workExperienceInfo in workExperiences[language]">
         <p class="flex justify-between"><span class="font-bold text-lg">{{ workExperienceInfo.place }}</span><span>{{ workExperienceInfo.date }}</span></p>
         <p class="italic">{{ workExperienceInfo.role }}</p>
-        <p class="my-2">{{ workExperienceInfo.description }}</p>
-        <p v-if="language === 'en'" class="font-bold">Technologies:</p>
-        <p v-else class="font-bold">Технологии:</p>
+        <p v-if="language === 'en'" class="mt-2 font-bold">Technologies:</p>
+        <p v-else class="mt-2 font-bold">Технологии:</p>
         <ul class="mb-2 list-disc list-inside">
-            <li v-for="technology in workExperienceInfo.technologies">{{ technology }}</li>
+            <li v-for="technology in workExperienceInfo.technologies"><span v-html="technology"></span></li>
         </ul>
-        <p v-if="language === 'en'" class="font-bold">Responsibilities:</p>
-        <p v-else class="font-bold">Обязанности:</p>
+        <p v-if="language === 'en'" class="mt-2 font-bold">Responsibilities:</p>
+        <p v-else class="mt-2 font-bold">Обязанности:</p>
         <ul class="mb-2 list-disc list-inside">
-            <li v-for="responsibility in workExperienceInfo.responsibilities">{{ responsibility }}</li>
+            <li v-for="responsibility in workExperienceInfo.responsibilities"><span v-html="responsibility"></span></li>
         </ul>
     </div>
 
     <div class="pl-5" v-if="language === 'en'">
         <p class="flex justify-between">
-            <span class="font-bold text-lg">Homselmash. Homel. Belarusian</span><span>2011 - 2020</span>
+            <span class="font-bold text-lg">Homselmash (Homel, Belarus)</span><span>2011 - 2020</span>
         </p>
         <ul class="italic">
-            <li>- Foreman</li>
-            <li>- Programmable machine operation "MAZAK QTN 250"</li>
+            <li>Foreman / CNC Machine Adjuster "MAZAK QTN 250""</li>
         </ul>
-        <ul class="my-2">
-            <li><span>Foreman (2019-2020)</span> - Work with documents, production control, production
-                process management, etc.
+        <ul class="my-2 list-disc list-inside">
+            <li>
+                <span>Foreman (2019-2020):</span> working with documentation, managing personnel, overseeing production processes
             </li>
-            <li><span>Programmable machine operation (2011-2019)</span> - Setting up a machining turning
-                center to produce the necessary parts. Control of manufactured parts.
+            <li>
+                <span>CNC Machine Adjuster (2011-2019):</span> setting up machining centers for part fabrication, writing programs, quality control of finished products
             </li>
         </ul>
     </div>
 
     <div class="pl-5" v-else>
         <p class="flex justify-between">
-            <span class="font-bold text-lg">Гомсельмаш. Гомель. Беларусь</span><span>2011 - 2020</span>
+            <span class="font-bold text-lg">Гомсельмаш (Гомель, Беларусь)</span><span>2011 - 2020</span>
         </p>
         <ul class="italic">
-            <li>- Мастер</li>
-            <li>- Наладчик станков с программным управлением "MAZAK QTN 250"</li>
+            <li>Мастер участка / Наладчик станков с программным управлением "MAZAK QTN 250"</li>
         </ul>
-        <ul class="my-2">
-            <li><span>Мастер (2019-2020)</span> - Работа с документами, управление людьми, контроль производственного процесса, и т.д.
+        <ul class="my-2 list-disc list-inside">
+            <li>
+                <span>Мастер участка (2019-2020):</span> работа с документацией, управление персоналом, контроль производственного процесса.
             </li>
-            <li><span>Наладчик станков с программным управлением (2011-2019)</span> - Настройка обрабатывающего центра для изготовления необходимых деталей. Контроль изготовленных деталей.
+            <li>
+                <span>Наладчик ЧПУ станков (2011-2019):</span> настройка обрабатывающего центра для производства деталей, написание программ, контроль качества готовой продукции.
             </li>
         </ul>
     </div>

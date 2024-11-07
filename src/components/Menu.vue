@@ -28,7 +28,7 @@ function downloadFile(url, fileName) {
                     <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
                 </svg>
                 <span class="pl-1">EN</span>
-                <span class="sr-only">Download english cv</span>
+                <span class="sr-only">Download en cv</span>
             </button>
             <div id="tooltip-download-en" role="tooltip"
                  class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
