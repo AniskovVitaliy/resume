@@ -146,26 +146,34 @@ export const config = {
                     {
                         name: 'Technologies',
                         data: [
-                            'PHP, Opencart and Laravel (a little)',
+                            '1C-Bitrix, PHP',
                             'JavaScript, JQuery, HTML, CSS',
-                            'Codeception (test), Xdebug, Xprof',
-                            'PHPStorm, Navicat, Insomnia, GIT'
+                            'Rest Api'
                         ]
                     },
                     {
                         name: 'Responsibilities',
                         data: [
-                            'Development and maintenance of the website <a href="https://ksk.by" class="text-sky-700">https://ksk.by</a>',
-                            'Creating modules, libraries, individual pages, filters, and other functionalities in OpenCart',
-                            'Frontend development using CSS, HTML, JavaScript, jQuery',
-                            'Integration with various REST APIs: YouGile, Yandex Maps, bplanner (3D kitchen planner), etc',
-                            'Writing SQL queries and optimizing them with EXPLAIN',
-                            'Debugging code with Xdebug and Xprofile for PHP, as well as using browser developer tools for Frontend',
-                            'Writing tests using the Codeception framework',
-                            'Developing parsers using PHPQuery',
-                            'Working with Laravel to create services and REST APIs'
+                            'Outsourcing, development, and technical support of websites on 1C-Bitrix.',
+                            'Development of components in 1C-Bitrix.',
+                            'Developing parsers for unloading goods from docx, xml, csv, as well as web sites.',
+                            'Working with various APIs: Google Tag Manager, Google Maps, Google Analytics.',
+                            'Administration of 1C-Bitrix.'
                         ]
                     }
+                ]
+            },
+            {
+                date: '2011 - 2020',
+                place: 'Homselmash (Homel, Belarus)',
+                role: 'Foreman / CNC Machine Adjuster "MAZAK QTN 250"',
+                content: [
+                    {
+                        data: [
+                            'Foreman (2019-2020): working with documentation, managing personnel, overseeing production processes.',
+                            'CNC Machine Adjuster (2011-2019): setting up machining centers for part fabrication, writing programs, quality control of finished products.'
+                        ]
+                    },
                 ]
             }
         ],
