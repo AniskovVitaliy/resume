@@ -148,7 +148,7 @@ export const config = {
                         data: [
                             '1C-Bitrix, PHP',
                             'JavaScript, JQuery, HTML, CSS',
-                            'Rest Api'
+                            'REST API'
                         ]
                     },
                     {
@@ -218,7 +218,7 @@ export const config = {
                         data: [
                             '1C-Bitrix, PHP',
                             'JavaScript, JQuery, HTML, CSS',
-                            'Rest Api'
+                            'REST API'
                         ]
                     },
                     {
