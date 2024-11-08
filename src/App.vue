@@ -41,11 +41,11 @@ function setLanguage(languageName) {
     <Menu
         @updateLanguage="(languageName) => setLanguage(languageName)"
     />
-    <div class="flex font-sans max-lg:flex-col-reverse" id="element-to-convert">
-        <div class="flex justify-center p-10 bg-zinc-700">
+    <div class="flex justify-between font-sans max-lg:flex-col-reverse">
+        <div class="min-w-[350px] flex justify-center p-10 bg-zinc-700 max-md:p-5">
             <div class="text-white">
                 <MainImage/>
-                <div class="max-lg:grid max-lg:grid-cols-2 max-lg:gap-12 max-sm:grid-cols-1">
+                <div class="max-lg:grid max-lg:grid-cols-2 max-lg:gap-12 max-sm:grid-cols-1 max-md:gap-6">
                     <BaseInfo
                         :contactsInfo="contactsInfo"
                         :language="language"
@@ -87,21 +87,23 @@ function setLanguage(languageName) {
                 </div>
             </div>
         </div>
-        <div class="p-10 max-w-5xl">
-            <ProfileText
-                :language="language"
-                :commonInfo="commonInfo"
-            />
-            <h2 class="pb-2 mb-6 text-3xl font-bold uppercase border-b-2 border-black" v-if="language === 'en'">Work Experience</h2>
-            <h2 class="pb-2 mb-6 text-3xl font-bold uppercase border-b-2 border-black" v-else>Опыт работы</h2>
-            <div class="border-l-2 border-zinc-700 relative">
-                <div class="absolute -left-2 -top-0 size-3 bg-white border-2 border-zinc-700"></div>
-                <div class="absolute -left-2 top-[50%] mt-[-6px] size-3 bg-white border-2 border-zinc-700"></div>
-                <div class="absolute -left-2 -bottom-0 size-3 bg-white border-2 border-zinc-700"></div>
-                <WorkExperience
-                    :workExperiences="workExperiences"
+        <div class="w-[100%] p-10 max-md:p-5">
+            <div class="max-w-[900px]">
+                <ProfileText
                     :language="language"
+                    :commonInfo="commonInfo"
                 />
+                <h2 class="pb-2 mb-6 text-3xl font-bold uppercase border-b-2 border-black max-md:text-xl" v-if="language === 'en'">Work Experience</h2>
+                <h2 class="pb-2 mb-6 text-3xl font-bold uppercase border-b-2 border-black max-md:text-xl" v-else>Опыт работы</h2>
+                <div class="border-l-2 border-zinc-700 relative">
+                    <div class="absolute -left-2 -top-0 size-3 bg-white border-2 border-zinc-700"></div>
+                    <div class="absolute -left-2 top-[50%] mt-[-6px] size-3 bg-white border-2 border-zinc-700"></div>
+                    <div class="absolute -left-2 -bottom-0 size-3 bg-white border-2 border-zinc-700"></div>
+                    <WorkExperience
+                        :workExperiences="workExperiences"
+                        :language="language"
+                    />
+                </div>
             </div>
         </div>
     </div>
