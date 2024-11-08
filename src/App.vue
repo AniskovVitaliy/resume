@@ -1,18 +1,15 @@
 <script setup>
 import Menu from "@/components/Menu.vue";
-import MainImage from '@/components/MainImage.vue'
 import BaseInfo from "@/components/BaseInfo.vue";
-import ProfileText from "@/components/ProfileText.vue";
+import AboutMe from "@/components/AboutMe.vue";
 import WorkExperience from "@/components/WorkExperience.vue";
-import Skills from "@/components/Skills.vue";
 
 import {ref} from 'vue';
 import {config} from "@/config.js";
 import 'flowbite';
 
-const commonInfo = ref(config.commonInfo);
-const contactsInfo = ref(config.contacts);
-const skills = ref(config.skills);
+const aboutMe = ref(config.aboutMe);
+const baseInfo = ref(config.baseInfo);
 const workExperiences = ref(config.workExperiences);
 
 const language = ref(localStorage.getItem('language') ?? checkGetParameter() ?? 'en');
@@ -43,69 +40,28 @@ function setLanguage(languageName) {
     />
     <div class="flex justify-between font-sans max-lg:flex-col-reverse">
         <div class="min-w-[350px] flex justify-center p-10 bg-zinc-700 max-md:p-5">
-            <div class="text-white">
-                <MainImage/>
-                <div class="max-lg:grid max-lg:grid-cols-2 max-lg:gap-12 max-sm:grid-cols-1 max-md:gap-6">
-                    <BaseInfo
-                        :contactsInfo="contactsInfo"
-                        :language="language"
-                    />
-                    <div class="order-3 mb-10 max-lg:m-0" v-if="language === 'en'">
-                        <p class="pb-2 text-xl font-bold uppercase border-b-2">Education</p>
-                        <ul class="my-3 text-sm">
-                            <li class="mb-2">2016 - 2021</li>
-                            <li class="mb-2">Gomel State University name after F.Skorina</li>
-                            <li class="mb-2">Software developer</li>
-                        </ul>
-                    </div>
-                    <div class="order-3 mb-10 max-lg:m-0" v-else>
-                        <p class="pb-2 text-xl font-bold uppercase border-b-2">Образование</p>
-                        <ul class="my-3 text-sm">
-                            <li class="mb-2">2016-2021</li>
-                            <li class="mb-2">Гомельский университет имени Ф.Скорина</li>
-                            <li class="mb-2">Инженер-программист</li>
-                        </ul>
-                    </div>
-                    <Skills
-                        :skills="skills"
-                        :language="language"
-                    />
-                    <div class="order-2" v-if="language === 'en'">
-                        <p class="pb-2 text-xl font-bold uppercase border-b-2">Languages</p>
-                        <ul class="my-3 text-sm">
-                            <li class="mb-2">English (A2)</li>
-                            <li class="mb-2">Russian (Native)</li>
-                        </ul>
-                    </div>
-                    <div class="order-2" v-else>
-                        <p class="pb-2 text-xl font-bold uppercase border-b-2">Языки</p>
-                        <ul class="my-3 text-sm">
-                            <li>Английский (A2)</li>
-                            <li>Русский (родной)</li>
-                        </ul>
-                    </div>
+            <div>
+                <div class="flex justify-center max-lg:hidden">
+                    <div class="w-[200px] h-[200px] bg-cover bg-no-repeat bg-center border-2 border-white rounded-full"
+                         style="background-image: url(./photo.jpg)"></div>
                 </div>
+                <BaseInfo
+                    :baseInfo="baseInfo"
+                    :language="language"
+                />
             </div>
         </div>
         <div class="w-[100%] p-10 max-md:p-5">
             <div class="max-w-[900px]">
-                <ProfileText
+                <AboutMe
                     :language="language"
-                    :commonInfo="commonInfo"
+                    :profile="aboutMe"
                 />
-                <h2 class="pb-2 mb-6 text-3xl font-bold uppercase border-b-2 border-black max-md:text-xl" v-if="language === 'en'">Work Experience</h2>
-                <h2 class="pb-2 mb-6 text-3xl font-bold uppercase border-b-2 border-black max-md:text-xl" v-else>Опыт работы</h2>
-                <div class="border-l-2 border-zinc-700 relative">
-                    <div class="absolute -left-2 -top-0 size-3 bg-white border-2 border-zinc-700"></div>
-                    <div class="absolute -left-2 top-[50%] mt-[-6px] size-3 bg-white border-2 border-zinc-700"></div>
-                    <div class="absolute -left-2 -bottom-0 size-3 bg-white border-2 border-zinc-700"></div>
-                    <WorkExperience
-                        :workExperiences="workExperiences"
-                        :language="language"
-                    />
-                </div>
+                <WorkExperience
+                    :workExperiences="workExperiences"
+                    :language="language"
+                />
             </div>
         </div>
     </div>
-
 </template>
